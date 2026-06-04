@@ -1,0 +1,468 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #071427;
+    overflow-x: hidden;
+}
+
+/* glow background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0,180,255,0.25), transparent 65%);
+    top: -300px;
+    left: -250px;
+    filter: blur(90px);
+    z-index: -1;
+}
+
+
+header {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #eef2ff);
+    overflow: hidden;
+}
+
+/* =======================
+   HERO (BIGGER + PREMIUM)
+======================= */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero p {
+    font-size: 26px;
+    color: #666;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 110px;
+    font-weight: 900;
+    color: #2b3cff;
+    letter-spacing: 2px;
+}
+
+/* CTA BUTTON */
+.hero-btn {
+    margin-top: 25px;
+    padding: 14px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #2b3cff, #6b7bff);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(43,60,255,0.25);
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(43,60,255,0.35);
+}
+
+/* =======================
+   NAV (LEFT COLUMN STYLE)
+======================= */
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; /* 👈 ВАЖНО */
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2b3cff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2b3cff;
+    transform: translateX(6px);
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+/* =======================
+   LANG
+======================= */
+.lang {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* =======================
+   SOCIAL
+======================= */
+.social {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    gap: 12px;
+}
+
+.circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =======================
+   ARROWS (KEEP NICE)
+======================= */
+.arrow {
+    position: absolute;
+    bottom: 25px;
+    font-size: 44px;
+    color: #2b3cff;
+    opacity: 0.9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    text-shadow: 0 0 15px rgba(43, 60, 255, 0.6);
+
+    animation: bounceArrow 1.5s infinite ease-in-out;
+}
+
+.arrow.left {
+    left: 40px;
+}
+
+.arrow.right {
+    right: 40px;
+}
+
+@keyframes bounceArrow {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(-12px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.6; }
+}
+
+/* =========================
+   ABOUT SECTION LAYOUT FIX
+========================= */
+
+#about {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #f7f9ff, #eef3ff);
+    padding: 120px 8%;
+    margin-top: 80px;
+    margin-left: 14%;
+}
+
+/* главный контейнер */
+.about {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 80px;
+
+    width: 90%;
+    height: 600px;
+    background: red;
+    max-width: 1100px;
+
+    align-items: start;
+}
+.dot.second{
+    margin-left: -16px;
+}
+/* =========================
+   LEFT CARD (PROFILE)
+========================= */
+
+.aboutCard {
+    position: sticky;
+    top: 100px;
+
+    background: white;
+    border-radius: 24px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(43,60,255,0.06);
+
+    transition: 0.3s;
+}
+
+.aboutCard:hover {
+    transform: translateY(-6px);
+}
+
+/* avatar центрируем */
+.avatar {
+    display: block;
+    margin: 0 auto 18px auto;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(43,60,255,0.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* текст делаем более читабельным */
+.aboutText {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #4b5563;
+
+    text-align: center;
+}
+
+/* кнопка */
+.cvBtn {
+    margin-top: 18px;
+    width: 100%;
+    height: 46px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #2b3cff, #5a7bff);
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cvBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(43,60,255,0.25);
+}
+
+/* соц сети */
+.socialAbout {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.socialAbout a {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: #f3f6ff;
+    border: 1px solid rgba(43,60,255,0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.socialAbout a:hover {
+    transform: translateY(-4px);
+    background: #eaf0ff;
+}
+
+/* =========================
+   RIGHT TIMELINE (CLEAN UI FLOW)
+========================= */
+
+.timeline {
+    position: relative;
+    padding-left: 60px;
+}
+
+/* линия */
+.line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+
+    background: linear-gradient(to bottom, #c7d2fe, transparent);
+}
+
+/* элемент */
+.item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* точка */
+.item::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 6px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #2b3cff;
+    box-shadow: 0 0 15px rgba(43,60,255,0.35);
+}
+
+/* текст */
+.item h3 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.item p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.item span {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* =========================
+   RESPONSIVE (IMPORTANT)
+========================= */
+
+@media (max-width: 900px) {
+    .about {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .aboutCard {
+        position: relative;
+        top: auto;
+    }
+
+    .timeline {
+        padding-left: 40px;
+    }
+}
+
+/* =========================
+   FLOATING BACK TO TOP BUTTON
+========================= */
+
+.backTop {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 14px;
+
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(43,60,255,0.12);
+    border-radius: 14px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    color: #2b3cff;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+/* hover */
+.backTop:hover {
+    transform: translateY(-50%) translateX(-6px);
+    box-shadow: 0 20px 50px rgba(43,60,255,0.15);
+    background: rgba(243,246,255,0.95);
+}
+
+/* маленькая стрелка (добавим через CSS) */
+.backTop::before {
+    content: "↑";
+    font-size: 14px;
+    color: #2b3cff;
+}
+
+.backTop {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* активное состояние */
+.backTop.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}

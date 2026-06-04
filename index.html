@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box">
+
+    <header id="home">
+
+        <div class="lang">
+            🇫🇷 / 🇬🇧
+        </div>
+
+        <div class="social">
+            <div class="circle">G</div>
+            <div class="circle">in</div>
+            <div class="circle">@</div>
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+        </nav>
+
+        <div class="hero">
+            <p>Hi, I'm</p>
+            <h1>Bro</h1>
+            <button class="hero-btn">View my work</button>
+        </div>
+
+        <div class="arrow left">
+            ⌄
+            <br>
+            ⌄
+            <br>
+            ⌄
+        </div>
+
+        <div class="arrow right">
+            ⌄
+            <br>
+            ⌄
+            <br>
+            ⌄
+        </div>
+
+    </header>
+
+    <section class="about" id="about">
+
+    <a href="#home" class="backTop">
+        Retour en haut
+    </a>
+
+    <div class="aboutCard">
+
+        <img src="img/" alt="" class="avatar">
+
+        <p class="aboutText">
+            Hi, I am a Front-End developer.
+            I enjoy creating modern interfaces,
+            learning new technologies and solving
+            complex problems.
+        </p>
+
+        <button class="cvBtn">
+            View CV
+        </button>
+
+        <div class="socialAbout">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="line"></div>
+
+        <div class="item left">
+            <h3>Technical College</h3>
+            <p>Programming</p>
+            <span>2023 - 2027</span>
+        </div>
+
+        <div class="dot"></div>
+
+        <div class="item right">
+            <h3>Front-End Projects</h3>
+            <p>React / JavaScript</p>
+            <span>2024</span>
+        </div>
+
+        <div class="dot second"></div>
+
+        <div class="item left third">
+            <h3>Future University</h3>
+            <p>Computer Science</p>
+            <span>2027+</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="projects">
+        <div class="projectsGrid">
+    <div class="projectCard"></div>
+    <div class="projectCard"></div>
+    <div class="projectCard"></div>
+</div>
+    </section>
+
+    <section id="skills">
+        <div class="skillsGrid">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+</div>
+    </section>
+
+
+    <main>
+        <h1>Добро пожаловать</h1>
+        <p>Основной контент страницы.</p>
+    </main>
+
+    <footer>
+        © 2026
+    </footer>
+</div>
+
+<script>
+const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+    let scroll = window.scrollY;
+
+    hero.style.transform =
+        `translate(-50%, calc(-50% + ${scroll * 0.4}px))`;
+});
+const backTop = document.querySelector('.backTop');
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const headerHeight = header.offsetHeight;
+
+    if (window.scrollY > headerHeight - 50) {
+        backTop.classList.add('show');
+    } else {
+        backTop.classList.remove('show');
+    }
+});
+</script>
+
+    
+</body>
+</html>
