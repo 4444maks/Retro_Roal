@@ -3,55 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class="box">
 
-    <header id="home">
+<div class="box">
 
-        <div class="lang">
-            🇫🇷 / 🇬🇧
-        </div>
+<!-- ================= HEADER ================= -->
+<header id="home">
 
-        <div class="social">
-            <div class="circle">G</div>
-            <div class="circle">in</div>
-            <div class="circle">@</div>
-        </div>
+    <div class="lang">
+        <button data-lang="fr">🇫🇷</button>
+        <button data-lang="en">🇬🇧</button>
+    </div>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-        </nav>
+    <div class="social">
+        <div class="circle">G</div>
+        <div class="circle">in</div>
+        <div class="circle">@</div>
+    </div>
 
-        <div class="hero">
-            <p>Hi, I'm</p>
-            <h1>Bro</h1>
-            <button class="hero-btn">View my work</button>
-        </div>
+    <nav>
+        <a href="#about" data-key="nav_about">About</a>
+        <a href="#projects" data-key="nav_projects">Projects</a>
+        <a href="#skills" data-key="nav_skills">Skills</a>
+    </nav>
 
-        <div class="arrow left">
-            ⌄
-            <br>
-            ⌄
-            <br>
-            ⌄
-        </div>
+    <div class="hero">
+        <p data-key="hero_hi">Hi, I'm</p>
+        <h1 data-key="hero_name">Max</h1>
+        <button class="hero-btn" data-key="hero_btn">View my work</button>
+    </div>
 
-        <div class="arrow right">
-            ⌄
-            <br>
-            ⌄
-            <br>
-            ⌄
-        </div>
+    <div class="arrow left">
+        ⌄<br>⌄<br>⌄
+    </div>
 
-    </header>
+    <div class="arrow right">
+        ⌄<br>⌄<br>⌄
+    </div>
 
-    <section class="about" id="about">
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
 
     <a href="#home" class="backTop">
         Retour en haut
@@ -59,33 +59,21 @@
 
     <div class="aboutCard">
 
-        <img src="img/" alt="" class="avatar">
+        <img src="img/avatar.jpg" alt="avatar" class="avatar">
 
-        <p class="aboutText">
-            Hi, I am a Front-End developer.
-            I enjoy creating modern interfaces,
-            learning new technologies and solving
-            complex problems.
+        <p class="aboutText" data-key="about_text">
+            Hi, I am a Front-End developer. I enjoy creating modern interfaces,
+            learning new technologies and solving complex problems.
         </p>
 
-        <button class="cvBtn">
+        <button class="cvBtn" data-key="about_cv">
             View CV
         </button>
 
         <div class="socialAbout">
-
-            <a href="#">
-                <i class="fa-brands fa-github"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
         </div>
 
     </div>
@@ -94,25 +82,21 @@
 
         <div class="line"></div>
 
-        <div class="item left">
-            <h3>Technical College</h3>
-            <p>Programming</p>
-            <span>2023 - 2027</span>
+        <div class="item">
+            <h3 data-key="timeline1_title">Started Learning Programming</h3>
+            <p data-key="timeline1_desc">HTML, CSS, JavaScript</p>
+            <span>2023</span>
         </div>
 
-        <div class="dot"></div>
-
-        <div class="item right">
-            <h3>Front-End Projects</h3>
-            <p>React / JavaScript</p>
-            <span>2024</span>
+        <div class="item">
+            <h3 data-key="timeline2_title">Front-End Development</h3>
+            <p data-key="timeline2_desc">React, Responsive Design, UI Development</p>
+            <span>2024 – Present</span>
         </div>
 
-        <div class="dot second"></div>
-
-        <div class="item left third">
-            <h3>Future University</h3>
-            <p>Computer Science</p>
+        <div class="item">
+            <h3 data-key="timeline3_title">Future Goals</h3>
+            <p data-key="timeline3_desc">Professional Front-End Developer</p>
             <span>2027+</span>
         </div>
 
@@ -120,151 +104,267 @@
 
 </section>
 
-    <section id="projects">
-        <div class="projectsGrid">
-    <div class="projectCard"></div>
-    <div class="projectCard"></div>
-    <div class="projectCard"></div>
-</div>
-    </section>
+<!-- ================= MORE INFO ================= -->
+<section class="moreWrapper">
 
- 
-    </section>
+    <button class="moreBtn" data-key="more_btn">
+        Learn More About Me
+    </button>
 
+    <div class="moreContent">
 
-   
+        <div class="moreCard">
 
-    
-    <section class="skillsPage" id="skills">
+            <h2 data-key="more_title">More About Me</h2>
 
-   
+            <p data-key="more_p1">
+                I am passionate about front-end development and modern web technologies.
+            </p>
 
-    <div class="skillsContainer">
+            <p data-key="more_p2">
+                I enjoy creating responsive websites and improving user experience.
+            </p>
 
-        <div class="skillBox">
-            <h3>Artificial Intelligence</h3>
+            <p data-key="more_p3">
+                Currently improving TypeScript and modern front-end architecture.
+            </p>
 
-            <div class="skillItem">
-                <img src="img/python.png" alt="">
-                <span>Python</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/tensorflow.png" alt="">
-                <span>TensorFlow</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/pytorch.png" alt="">
-                <span>PyTorch</span>
-            </div>
-        </div>
-
-        <div class="skillBox">
-            <h3>Web development</h3>
-
-            <div class="skillItem">
-                <img src="img/typescript.png" alt="">
-                <span>TypeScript</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/node.png" alt="">
-                <span>Node.Js</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/react.png" alt="">
-                <span>React</span>
-            </div>
-        </div>
-
-        <div class="skillBox">
-            <h3>SAP Development</h3>
-
-            <div class="skillItem">
-                <img src="img/sap.png" alt="">
-                <span>ABAP</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/odata.png" alt="">
-                <span>OData</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/sap.png" alt="">
-                <span>SAP Fiori</span>
-            </div>
-        </div>
-
-        <div class="skillBox">
-            <h3>Object-Oriented</h3>
-
-            <div class="skillItem">
-                <img src="img/java.png" alt="">
-                <span>Java</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/cpp.png" alt="">
-                <span>C++</span>
-            </div>
-
-            <div class="skillItem">
-                <img src="img/csharp.png" alt="">
-                <span>C#</span>
-            </div>
-        </div>
-
-        <div class="skillBox">
-            <h3>Low-level development</h3>
-
-            <div class="skillItem">
-                <img src="img/c.png" alt="">
-                <span>C</span>
-            </div>
-        </div>
-
-        <div class="skillBox">
-            <h3>DevOps & Tools</h3>
-
-            <div class="skillItem">
-                <img src="img/git.png" alt="">
-                <span>Git</span>
-            </div>
-
-            
         </div>
 
     </div>
 
 </section>
+
+<!-- ================= SKILLS ================= -->
+<section class="skillsPage" id="skills">
+
+    <div class="skillsContainer">
+
+        <div class="skillBox">
+            <h3 data-key="skills_ai">AI</h3>
+            <div class="skillItem">
+                <img src="img/python.png">
+                <span>Python</span>
+            </div>
+        </div>
+
+        <div class="skillBox">
+            <h3 data-key="skills_web">Web Development</h3>
+
+            <div class="skillItem">
+                <img src="img/typescript.png">
+                <span>TypeScript</span>
+            </div>
+
+            <div class="skillItem">
+                <img src="img/react.png">
+                <span>React</span>
+            </div>
+
+            <div class="skillItem">
+                <img src="img/node.png">
+                <span>Node.js</span>
+            </div>
+        </div>
+
+        <div class="skillBox">
+            <h3 data-key="skills_oop">OOP</h3>
+
+            <div class="skillItem">
+                <img src="img/java.png">
+                <span>Java</span>
+            </div>
+
+            <div class="skillItem">
+                <img src="img/cpp.png">
+                <span>C++</span>
+            </div>
+        </div>
+
+        <div class="skillBox">
+            <h3 data-key="skills_low">Low-level</h3>
+
+            <div class="skillItem">
+                <img src="img/c.png">
+                <span>C</span>
+            </div>
+        </div>
+
+        <div class="skillBox">
+            <h3 data-key="skills_tools">Tools</h3>
+
+            <div class="skillItem">
+                <img src="img/git.png">
+                <span>Git</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="projectsSection" id="projects">
+
+    <div class="projectsGrid">
+
+        <div class="projectCard orange">
+            <h2 data-key="proj1_title">Wallpaper Generator</h2>
+            <img src="img/project1.jpg">
+            <p data-key="proj1_desc">Generates image mosaics sorted by color.</p>
+            <a href="#" class="githubBtn">GitHub</a>
+        </div>
+
+        <div class="projectCard cyan">
+            <h2 data-key="proj2_title">Neural Network</h2>
+            <img src="img/project2.jpg">
+            <p data-key="proj2_desc">Neural network built from scratch in Python.</p>
+            <a href="#" class="githubBtn">GitHub</a>
+        </div>
+
+        <div class="projectCard purple">
+            <h2 data-key="proj3_title">Ray Tracing</h2>
+            <img src="img/project3.jpg">
+            <p data-key="proj3_desc">3D rendering system with light simulation.</p>
+            <a href="#" class="githubBtn">GitHub</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footerGlow"></div>
+
+    <div class="footerContent">
+
+        <div class="footerLeft">
+            <h2>Max</h2>
+            <p data-key="footer_desc">
+                Front-End developer creating modern interfaces.
+            </p>
+        </div>
+
+        <div class="footerCenter">
+            <h3 data-key="footer_contacts">Contacts</h3>
+            <a href="mailto:max@example.com">Email</a>
+            <a href="https://github.com/">GitHub</a>
+            <a href="https://linkedin.com/">LinkedIn</a>
+        </div>
+
+        <div class="footerRight">
+            <h3 data-key="footer_nav">Navigation</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+        </div>
+
+    </div>
+
+    <div class="footerBottom">
+        © 2026 Max Portfolio. All rights reserved.
+    </div>
+
+</footer>
+
 </div>
 
+<!-- ================= JS ================= -->
 <script>
-const hero = document.querySelector('.hero');
+const translations = {
+    en: {
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_skills: "Skills",
 
-window.addEventListener('scroll', () => {
-    let scroll = window.scrollY;
+        hero_hi: "Hi, I'm",
+        hero_name: "Max",
+        hero_btn: "View my work",
 
-    hero.style.transform =
-        `translate(-50%, calc(-50% + ${scroll * 0.4}px))`;
-});
-const backTop = document.querySelector('.backTop');
-const header = document.querySelector('header');
+        about_text: "Hi, I am a Front-End developer. I enjoy creating modern interfaces, learning new technologies and solving complex problems.",
+        about_cv: "View CV",
 
-window.addEventListener('scroll', () => {
-    const headerHeight = header.offsetHeight;
+        more_btn: "Learn More About Me",
+        more_title: "More About Me",
+        more_p1: "I am passionate about front-end development and modern web technologies.",
+        more_p2: "I enjoy creating responsive websites and improving user experience.",
+        more_p3: "Currently improving TypeScript and modern front-end architecture.",
 
-    if (window.scrollY > headerHeight - 50) {
-        backTop.classList.add('show');
-    } else {
-        backTop.classList.remove('show');
+        skills_ai: "AI",
+        skills_web: "Web Development",
+        skills_oop: "OOP",
+        skills_low: "Low-level",
+        skills_tools: "Tools",
+
+        proj1_title: "Wallpaper Generator",
+        proj1_desc: "Generates image mosaics sorted by color.",
+        proj2_title: "Neural Network",
+        proj2_desc: "Neural network built from scratch in Python.",
+        proj3_title: "Ray Tracing",
+        proj3_desc: "3D rendering system with light simulation.",
+
+        footer_desc: "Front-End developer creating modern interfaces.",
+        footer_contacts: "Contacts",
+        footer_nav: "Navigation"
+    },
+
+    fr: {
+        nav_about: "À propos",
+        nav_projects: "Projets",
+        nav_skills: "Compétences",
+
+        hero_hi: "Salut, je suis",
+        hero_name: "Max",
+        hero_btn: "Voir mon travail",
+
+        about_text: "Je suis développeur Front-End.",
+        about_cv: "Voir CV",
+
+        more_btn: "En savoir plus sur moi",
+        more_title: "Plus sur moi",
+        more_p1: "Je suis passionné par le développement front-end.",
+        more_p2: "J'aime créer des sites responsives.",
+        more_p3: "J'améliore TypeScript et l'architecture moderne.",
+
+        skills_ai: "IA",
+        skills_web: "Développement Web",
+        skills_oop: "POO",
+        skills_low: "Bas niveau",
+        skills_tools: "Outils",
+
+        proj1_title: "Générateur de fond d'écran",
+        proj1_desc: "Crée des mosaïques d'images triées par couleur.",
+        proj2_title: "Réseau neuronal",
+        proj2_desc: "Réseau neuronal créé en Python.",
+        proj3_title: "Ray tracing",
+        proj3_desc: "Système de rendu 3D avec lumière."
     }
+};
+
+function setLanguage(lang) {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.dataset.key;
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    localStorage.setItem("lang", lang);
+}
+
+document.querySelectorAll("[data-lang]").forEach(btn => {
+    btn.addEventListener("click", () => {
+        setLanguage(btn.dataset.lang);
+    });
+});
+
+window.addEventListener("load", () => {
+    setLanguage(localStorage.getItem("lang") || "en");
 });
 </script>
 
-    
 </body>
 </html>
