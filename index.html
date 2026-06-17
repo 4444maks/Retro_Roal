@@ -17,10 +17,7 @@
 <!-- ================= HEADER ================= -->
 <header id="home">
 
-    <div class="lang">
-        <button data-lang="fr">🇫🇷</button>
-        <button data-lang="en">🇬🇧</button>
-    </div>
+    
 
     <div class="social">
         <div class="circle">G</div>
@@ -37,7 +34,9 @@
     <div class="hero">
         <p data-key="hero_hi">Hi, I'm</p>
         <h1 data-key="hero_name">Max</h1>
-        <button class="hero-btn" data-key="hero_btn">View my work</button>
+        <button class="hero-btn" data-key="hero_btn">
+    View my work
+</button>
     </div>
 
     <div class="arrow left">
@@ -143,7 +142,7 @@
         <div class="skillBox">
             <h3 data-key="skills_ai">AI</h3>
             <div class="skillItem">
-                <img src="img/python.png">
+                
                 <span>Python</span>
             </div>
         </div>
@@ -152,17 +151,17 @@
             <h3 data-key="skills_web">Web Development</h3>
 
             <div class="skillItem">
-                <img src="img/typescript.png">
+                
                 <span>TypeScript</span>
             </div>
 
             <div class="skillItem">
-                <img src="img/react.png">
+               
                 <span>React</span>
             </div>
 
             <div class="skillItem">
-                <img src="img/node.png">
+               
                 <span>Node.js</span>
             </div>
         </div>
@@ -171,12 +170,12 @@
             <h3 data-key="skills_oop">OOP</h3>
 
             <div class="skillItem">
-                <img src="img/java.png">
+                
                 <span>Java</span>
             </div>
 
             <div class="skillItem">
-                <img src="img/cpp.png">
+                
                 <span>C++</span>
             </div>
         </div>
@@ -185,7 +184,7 @@
             <h3 data-key="skills_low">Low-level</h3>
 
             <div class="skillItem">
-                <img src="img/c.png">
+                
                 <span>C</span>
             </div>
         </div>
@@ -194,7 +193,7 @@
             <h3 data-key="skills_tools">Tools</h3>
 
             <div class="skillItem">
-                <img src="img/git.png">
+             
                 <span>Git</span>
             </div>
         </div>
@@ -274,6 +273,12 @@
 
 <!-- ================= JS ================= -->
 <script>
+    const moreBtn = document.querySelector(".moreBtn");
+const moreContent = document.querySelector(".moreContent");
+
+moreBtn.addEventListener("click", () => {
+    moreContent.classList.toggle("active");
+});
 const translations = {
     en: {
         nav_about: "About",
@@ -363,6 +368,23 @@ document.querySelectorAll("[data-lang]").forEach(btn => {
 
 window.addEventListener("load", () => {
     setLanguage(localStorage.getItem("lang") || "en");
+});
+document.querySelector(".hero-btn").addEventListener("click", () => {
+    location.href = "#projects";
+});
+document.querySelector(".cvBtn").addEventListener("click", () => {
+
+    const btn = document.querySelector(".cvBtn");
+
+    btn.innerText = "Loading.";
+
+    setTimeout(() => btn.innerText = "Loading..", 300);
+    setTimeout(() => btn.innerText = "Loading...", 600);
+
+    setTimeout(() => {
+        btn.innerText = "Opening CV";
+        window.open("cv.pdf");
+    }, 1200);
 });
 </script>
 
