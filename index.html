@@ -65,7 +65,7 @@
         <p class="aboutText" data-key="about_text">
     1Hi, I’m a Front-End developer focused on building clean, responsive, and modern user interfaces. I enjoy turning ideas into real, interactive web projects and constantly improving how they look and feel.
     I spend a lot of time thinking through structure, design, and user experience before writing code, which helps me create more stable and well-organized solutions.
-    I like learning new technologies, experimenting with layouts, and solving problems through logic and creativity. My goal is to grow into a strong developer who builds meaningful and well-designed digital products.
+    
 </p>
 
        
@@ -281,21 +281,21 @@
         <div class="projectCard orange">
             <h2 data-key="proj1_title">Wallpaper Generator</h2>
             <img src="img/1.png">
-            <p data-key="proj1_desc">Generates image mosaics sorted by color.</p>
+            <p data-key="proj1_desc">A web tool that generates abstract wallpapers by analyzing image colors and arranging them into structured mosaics. The system sorts pixels by dominant colors and builds visually balanced patterns automatically..</p>
             <a href="https://4444maks.github.io/67/" class="githubBtn">GitHub</a>
         </div>
 
         <div class="projectCard cyan">
             <h2 data-key="proj2_title">Neural Network</h2>
             <img src="img/2.png">
-            <p data-key="proj2_desc">Neural network built from scratch in Python.</p>
+            <p data-key="proj2_desc">A neural network implemented from scratch in Python without external ML frameworks. Includes forward propagation, backpropagation and weight adjustment logic to demonstrate how learning works internally.</p>
             <a href=" https://4444maks.github.io/z/" class="githubBtn">GitHub</a>
         </div>
 
         <div class="projectCard purple">
             <h2 data-key="proj3_title">Ray Tracing</h2>
             <img src="img/3.png">
-            <p data-key="proj3_desc">3D rendering system with light simulation.</p>
+            <p data-key="proj3_desc">A 3D rendering system with realistic light simulation and ray tracing algorithms.</p>
             <a href="https://4444maks.github.io/test/" class="githubBtn">GitHub</a>
         </div>
 
@@ -353,75 +353,6 @@ const moreContent = document.querySelector(".moreContent");
 moreBtn.addEventListener("click", () => {
     moreContent.classList.toggle("active");
 });
-const translations = {
-    en: {
-        nav_about: "About",
-        nav_projects: "Projects",
-        nav_skills: "Skills",
-
-        hero_hi: "Hi, I'm",
-        hero_name: "Max",
-        hero_btn: "View my work",
-
-        about_text: "Hi, I am a Front-End developer. I enjoy creating modern interfaces, learning new technologies and solving complex problems.",
-        about_cv: "View CV",
-
-        more_btn: "Learn More About Me",
-        more_title: "More About Me",
-        more_p1: "I am passionate about front-end development and modern web technologies.",
-        more_p2: "I enjoy creating responsive websites and improving user experience.",
-        more_p3: "Currently improving TypeScript and modern front-end architecture.",
-
-        skills_ai: "AI",
-        skills_web: "Web Development",
-        skills_oop: "OOP",
-        skills_low: "Low-level",
-        skills_tools: "Tools",
-
-        proj1_title: "Wallpaper Generator",
-        proj1_desc: "Generates image mosaics sorted by color.",
-        proj2_title: "Neural Network",
-        proj2_desc: "Neural network built from scratch in Python.",
-        proj3_title: "Ray Tracing",
-        proj3_desc: "3D rendering system with light simulation.",
-
-        footer_desc: "Front-End developer creating modern interfaces.",
-        footer_contacts: "Contacts",
-        footer_nav: "Navigation"
-    },
-
-    fr: {
-        nav_about: "À propos",
-        nav_projects: "Projets",
-        nav_skills: "Compétences",
-
-        hero_hi: "Salut, je suis",
-        hero_name: "Max",
-        hero_btn: "Voir mon travail",
-
-        about_text: "Je suis développeur Front-End.",
-        about_cv: "Voir CV",
-
-        more_btn: "En savoir plus sur moi",
-        more_title: "Plus sur moi",
-        more_p1: "Je suis passionné par le développement front-end.",
-        more_p2: "J'aime créer des sites responsives.",
-        more_p3: "J'améliore TypeScript et l'architecture moderne.",
-
-        skills_ai: "IA",
-        skills_web: "Développement Web",
-        skills_oop: "POO",
-        skills_low: "Bas niveau",
-        skills_tools: "Outils",
-
-        proj1_title: "Générateur de fond d'écran",
-        proj1_desc: "Crée des mosaïques d'images triées par couleur.",
-        proj2_title: "Réseau neuronal",
-        proj2_desc: "Réseau neuronal créé en Python.",
-        proj3_title: "Ray tracing",
-        proj3_desc: "Système de rendu 3D avec lumière."
-    }
-};
 
 function setLanguage(lang) {
     document.querySelectorAll("[data-key]").forEach(el => {
